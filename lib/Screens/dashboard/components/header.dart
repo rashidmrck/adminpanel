@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
 
-
 class Header extends StatelessWidget {
   const Header({
     Key key,
@@ -17,7 +16,9 @@ class Header extends StatelessWidget {
           'Dashboard',
           style: Theme.of(context).textTheme.headline6,
         ),
-        Spacer(),
+        Spacer(
+          flex: 2,
+        ),
         Expanded(
           child: SearchFiled(),
         ),
@@ -53,8 +54,7 @@ class ProfileCard extends StatelessWidget {
             height: 38,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: defaultPadding / 2),
+            padding: const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
             child: Text(
               'Mr CK',
             ),

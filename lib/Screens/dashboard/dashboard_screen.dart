@@ -10,11 +10,10 @@ class DashBoardScreen extends StatelessWidget {
         padding: EdgeInsets.all(defaultPadding),
         child: Column(
           children: [
-            Header()
+            Header(),
           ],
         ),
       ),
     );
   }
 }
-
