@@ -1,3 +1,4 @@
+import 'package:adminpanel/Screens/dashboard/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'components/side_menu.dart';
 
@@ -13,9 +14,7 @@ class MainScreen extends StatelessWidget {
             ),
             Expanded(
               flex: 5,
-              child: Container(
-                color: Colors.blue,
-              ),
+              child: DashBoardScreen(),
             ),
           ],
         ),
