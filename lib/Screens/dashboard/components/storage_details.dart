@@ -8,10 +8,7 @@ import 'storage_card.dart';
 class StorageDetails extends StatelessWidget {
   const StorageDetails({
     Key key,
-    @required this.paiChartSelectionData,
   }) : super(key: key);
-
-  final List<PieChartSectionData> paiChartSelectionData;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +24,7 @@ class StorageDetails extends StatelessWidget {
         SizedBox(
           height: defaultPadding,
         ),
-        Chart(
-          paiChartSelectionData: paiChartSelectionData,
-        ),
+        Chart(),
         StorageInfoCard(
           fileSize: '1.3GB',
           numberOfFiles: 1328,

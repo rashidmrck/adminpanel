@@ -6,10 +6,7 @@ import '../../../constants.dart';
 class Chart extends StatelessWidget {
   const Chart({
     Key key,
-    @required this.paiChartSelectionData,
   }) : super(key: key);
-
-  final List<PieChartSectionData> paiChartSelectionData;
 
   @override
   Widget build(BuildContext context) {
@@ -49,3 +46,36 @@ class Chart extends StatelessWidget {
     );
   }
 }
+
+List<PieChartSectionData> paiChartSelectionData = [
+  PieChartSectionData(
+    showTitle: false,
+    value: 25,
+    color: primaryColor,
+    radius: 25,
+  ),
+  PieChartSectionData(
+    showTitle: false,
+    value: 20,
+    color: Color(0xFF26E5FF),
+    radius: 22,
+  ),
+  PieChartSectionData(
+    showTitle: false,
+    value: 10,
+    color: Color(0xFFFFCF26),
+    radius: 19,
+  ),
+  PieChartSectionData(
+    showTitle: false,
+    value: 15,
+    color: Color(0xFFEE2727),
+    radius: 16,
+  ),
+  PieChartSectionData(
+    showTitle: false,
+    value: 25,
+    color: primaryColor.withOpacity(0.1),
+    radius: 13,
+  ),
+];
