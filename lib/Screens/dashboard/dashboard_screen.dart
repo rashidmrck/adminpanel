@@ -20,9 +20,29 @@ class DashBoardScreen extends StatelessWidget {
               children: [
                 Expanded(
                   flex: 5,
-                  child: Container(
-                    height: 500,
-                    color: Colors.white,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'My Files',
+                            style: Theme.of(context).textTheme.subtitle1,
+                          ),
+                          ElevatedButton.icon(
+                            style: ElevatedButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(
+                                vertical: defaultPadding,
+                                horizontal: defaultPadding * 1.5,
+                              ),
+                            ),
+                            onPressed: () {},
+                            icon: Icon(Icons.add),
+                            label: Text('Add New'),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(
