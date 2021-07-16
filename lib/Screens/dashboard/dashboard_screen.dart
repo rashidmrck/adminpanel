@@ -1,7 +1,8 @@
-import 'package:adminpanel/constants.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:adminpanel/constants.dart';
 import 'components/header.dart';
+import 'components/storage_details.dart';
 
 class DashBoardScreen extends StatelessWidget {
   @override
@@ -48,6 +49,7 @@ class DashBoardScreen extends StatelessWidget {
               height: defaultPadding,
             ),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 5,
@@ -63,38 +65,20 @@ class DashBoardScreen extends StatelessWidget {
                   flex: 2,
                   child: Container(
                     padding: const EdgeInsets.all(defaultPadding),
-                    height: 500,
+                    // height: 500,
                     decoration: BoxDecoration(
                       color: secondaryColor,
                       borderRadius: const BorderRadius.all(
                         Radius.circular(10),
                       ),
                     ),
-                    child: Column(
-                      children: [
-                        Text(
-                          "Storage Details",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 200,
-                          child: PieChart(
-                            PieChartData(
-                              centerSpaceRadius: 10,
-                              sections: paiChartSelectionData,
-                              startDegreeOffset: -90,
-                            ),
-                          ),
-                        ),
-                      ],
+                    child: StorageDetails(
+                      paiChartSelectionData: paiChartSelectionData,
                     ),
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),
