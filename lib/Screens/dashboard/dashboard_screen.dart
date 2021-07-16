@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:adminpanel/constants.dart';
 import 'components/header.dart';
+import 'components/my_files.dart';
+import 'components/recent_file.dart';
 import 'components/storage_details.dart';
 
 class DashBoardScreen extends StatelessWidget {
@@ -22,26 +24,11 @@ class DashBoardScreen extends StatelessWidget {
                   flex: 5,
                   child: Column(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'My Files',
-                            style: Theme.of(context).textTheme.subtitle1,
-                          ),
-                          ElevatedButton.icon(
-                            style: ElevatedButton.styleFrom(
-                              padding: const EdgeInsets.symmetric(
-                                vertical: defaultPadding,
-                                horizontal: defaultPadding * 1.5,
-                              ),
-                            ),
-                            onPressed: () {},
-                            icon: Icon(Icons.add),
-                            label: Text('Add New'),
-                          )
-                        ],
-                      )
+                      MyFiles(),
+                      SizedBox(
+                        height: defaultPadding,
+                      ),
+                      RecentFiles()
                     ],
                   ),
                 ),
@@ -50,16 +37,7 @@ class DashBoardScreen extends StatelessWidget {
                 ),
                 Expanded(
                   flex: 2,
-                  child: Container(
-                    padding: const EdgeInsets.all(defaultPadding),
-                    decoration: BoxDecoration(
-                      color: secondaryColor,
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                    ),
-                    child: StorageDetails(),
-                  ),
+                  child: StorageDetails(),
                 ),
               ],
             ),
