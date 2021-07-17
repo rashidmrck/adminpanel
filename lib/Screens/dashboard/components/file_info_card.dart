@@ -56,6 +56,7 @@ class FileinfoCard extends StatelessWidget {
           Text(
             info.title,
             maxLines: 1,
+            textScaleFactor: 1,
             overflow: TextOverflow.ellipsis,
           ),
           ProgressLine(
@@ -67,15 +68,20 @@ class FileinfoCard extends StatelessWidget {
             children: [
               Text(
                 '${info.numOfFiles} Files',
+                textScaleFactor: 1,
                 style: Theme.of(context)
                     .textTheme
                     .caption
                     .copyWith(color: Colors.white70),
               ),
-              Text(info.totalStorage,style: Theme.of(context)
+              Text(
+                info.totalStorage,
+                textScaleFactor: 1,
+                style: Theme.of(context)
                     .textTheme
                     .caption
-                    .copyWith(color: Colors.white),),
+                    .copyWith(color: Colors.white),
+              ),
             ],
           ),
         ],

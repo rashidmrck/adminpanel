@@ -23,6 +23,7 @@ class StorageDetails extends StatelessWidget {
         children: [
           Text(
             "Storage Details",
+            textScaleFactor: 1,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
